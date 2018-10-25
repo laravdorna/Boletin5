@@ -3,11 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+//paquetes
 package boletin5_banco;
 
 /**
  *
- * @author lvazquezdorna
+ * @author Lara Vazquez Dorna
  */
 public class Cuenta {
 
@@ -72,9 +73,9 @@ public class Cuenta {
     public boolean reintegro(double saco) {
         //no dejar sacar si no es positivo el saldo de la cuenta
         //boolean si se pudo o no hacer
-        if (this.saldo>=0){
-        this.saldo = this.saldo - saco;
-        return true;
+        if (this.saldo >= 0) {
+            this.saldo = this.saldo - saco;
+            return true;
         }
         return false;
     }
