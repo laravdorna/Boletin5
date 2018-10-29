@@ -78,9 +78,9 @@ public class Boletin5_Banco {
                     break;
                 default:
                     System.out.println("La operación elegida no existe.");
-
+                    break;
             }
-        } while (opcion !=0);
+        } while (opcion != 0);
 
     }
 
@@ -95,7 +95,7 @@ public class Boletin5_Banco {
                     + "\n4=>Transferencia"
                     + "\n0=>Salir");
             op = Integer.parseInt(teclado.nextLine());
-        } while (op < 0 || op > 3);
+        } while (op < 0 || op > 4);
         return op;
 
     }
