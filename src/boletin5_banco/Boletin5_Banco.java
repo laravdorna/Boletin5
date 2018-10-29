@@ -24,7 +24,7 @@ public class Boletin5_Banco {
         Cuenta cuentaTraspaso = new Cuenta("Juan", "987654", 2000);
         //bandera
         boolean aceptado;
-        
+
         System.out.println("Bienvenido al gestor de cuentas bancarias."
                 + " que operación desea realizar:");
 
@@ -39,7 +39,7 @@ public class Boletin5_Banco {
                     break;
                 case 2:
                     //ingresar
-                   aceptado = false;
+                    aceptado = false;
                     System.out.println("\n*************************************************************"
                             + "\n\t                 Ingresar               "
                             + "\n*************************************************************");
@@ -51,7 +51,7 @@ public class Boletin5_Banco {
                     break;
                 case 3:
                     //retirar
-                   aceptado = false;
+                    aceptado = false;
                     System.out.println("\n*************************************************************"
                             + "\n\t                Reintegro                "
                             + "\n*************************************************************");
@@ -63,14 +63,14 @@ public class Boletin5_Banco {
                     break;
                 case 4:
                     //transferencia
-                   aceptado = false;
+                    aceptado = false;
                     System.out.println("\n*************************************************************"
                             + "\n\t                 Transferencia                "
                             + "\n*************************************************************");
                     while (!aceptado) {
 
                         System.out.println("\nQue cantidad desea transferir?:");
-                        aceptado = cuentaCliente.transferencia(cuentaTraspaso,teclado.nextFloat());
+                        aceptado = cuentaCliente.transferencia(cuentaTraspaso, teclado.nextFloat());
                     }
                     break;
                 case 0:
@@ -80,7 +80,7 @@ public class Boletin5_Banco {
                     System.out.println("La operación elegida no existe.");
 
             }
-        } while (opcion != 0);
+        } while (opcion !=0);
 
     }
 
@@ -89,19 +89,12 @@ public class Boletin5_Banco {
         Scanner teclado = new Scanner(System.in);
         do {
             System.out.println("\nQue operación desea realizar:"
-                    +"\n1=>Ver sus datos de la cuenta bancaria"
+                    + "\n1=>Ver sus datos de la cuenta bancaria"
                     + "\n2=>Ingresar dinero"
                     + "\n3=>Retirar dinero"
                     + "\n4=>Transferencia"
                     + "\n0=>Salir");
-
-            try {
-                op = Integer.parseInt(teclado.nextLine());
-            } catch (NumberFormatException ex) {
-                System.out.println("Escoja un  numero de opcion correcto.");
-                op = -1;
-            }
-
+            op = Integer.parseInt(teclado.nextLine());
         } while (op < 0 || op > 3);
         return op;
 

@@ -64,7 +64,7 @@ public class Cuenta {
                 + "\n********************************************************************"
                 + "\n\t Nombre del titular\t:" + this.nome
                 + "\n\t Numero de cuenta\t:" + this.nConta
-                + "\n\t Saldo actual\t:" + this.saldo + "€");
+                + "\n\t Saldo actual    \t:" + this.saldo + "€");
     }
 
     //METODOS DE CALCULO
