@@ -8,7 +8,6 @@ package boletin5_banco;
 import java.util.Scanner;
 
 /**
- *
  * @author lvazquezdorna
  */
 public class Boletin5_Banco {
@@ -28,7 +27,7 @@ public class Boletin5_Banco {
         System.out.println("Bienvenido al gestor de cuentas bancarias."
                 + " que operación desea realizar:");
 
-        int opcion = 0;
+        int opcion;
         do {
             opcion = menu();
             switch (opcion) {
@@ -85,19 +84,15 @@ public class Boletin5_Banco {
     }
 
     private static int menu() {
-        int op = 0;
         Scanner teclado = new Scanner(System.in);
-        do {
-            System.out.println("\nQue operación desea realizar:"
-                    + "\n1=>Ver sus datos de la cuenta bancaria"
-                    + "\n2=>Ingresar dinero"
-                    + "\n3=>Retirar dinero"
-                    + "\n4=>Transferencia"
-                    + "\n0=>Salir");
-            op = Integer.parseInt(teclado.nextLine());
-        } while (op < 0 || op > 4);
-        return op;
+        System.out.println("\nQue operación desea realizar:"
+                + "\n1=>Ver sus datos de la cuenta bancaria"
+                + "\n2=>Ingresar dinero"
+                + "\n3=>Retirar dinero"
+                + "\n4=>Transferencia"
+                + "\n0=>Salir");
 
+        return Integer.parseInt(teclado.nextLine());
     }
 
 }
